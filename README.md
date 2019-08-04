@@ -8,6 +8,13 @@ The project itself is licensed under the [Apache 2.0][] and the [CC-BY 4.0][] li
 
 Contributions [welcome](#contributing).
 
+## Overview
+
+![licence](https://img.shields.io/badge/licence-Apache-2.0-blue.svg)
+![tshock version](https://img.shields.io/badge/tshock-v4.3.26-green.svg)
+![terraria api version](https://img.shields.io/badge/TerrariaAPI-2.1-lightgrey.svg)
+![terraria version](https://img.shields.io/badge/terraria-1.3.5.3-brightgreen.svg)
+
 ## Table of contents
 
 * [Motivation](#motivation)
