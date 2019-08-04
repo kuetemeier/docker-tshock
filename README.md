@@ -1,13 +1,12 @@
-# Common project template v1.1.0
+# Terraria - TShock Server in Docker
 
-*This is my project template repository, I use it as a common starting point for new projects.*
+Let's play Terraria with docker ;-)
 
-**Feel free to use it as a basis for your own projects.**
+**Feel free to use it directly or fork it for you own server configuration**
 
-The template itself is licensed under the [Apache 2.0][] and the [CC-BY 4.0][] licenses (see [Copyright and Licenses](#copyright-and-licenses) for more informations).
+The project itself is licensed under the [Apache 2.0][] and the [CC-BY 4.0][] licenses (see [Copyright and Licenses](#copyright-and-licenses) for more informations).
 
 Contributions [welcome](#contributing).
-
 
 ## Table of contents
 
@@ -26,34 +25,55 @@ so I use this template as a common starting point for my projects.
 
 ## Quick start
 
-### Integrate it into your own repo
 
-Create your Git repository (e.g. on GitHub) or with a simple `git init`.
+## Plugins
 
-Now let's add this repository as a remote:
+### Permabuffs
 
-    git remote add project-template git@github.com:kuetemeier/project-template.git
+- https://tshock.co/xf/index.php?resources/permabuffs.5/
 
-and fetch the master (or tag you like to fetch)
+### GHOST PLUGIN (VANISH) 1.1
 
-    git fetch project-template
+- https://tshock.co/xf/index.php?resources/ghost-plugin-vanish.217/
+- https://github.com/DannyDan77/Ghost
 
-now inlcude the template into your project
 
-    git merge project-template/master
 
-That's all. Now you have the template files in your repo and can edit and push
-them to your new project repository.
+### House Regions Plugin
 
-### Customize the project template
+- https://tshock.co/xf/index.php?resources/house-regions.191/
 
-1. **Choose a license for your project**
-   If you're not sure which to pick choose one from [choosealicense.com](http://choosealicense.com/).
-   We reccomend you to choose the Apache 2.0 license, but that's a decision you have to make.
-2. **Put your licenses into the LICENSE files**
-   There are two files in this template: `LICENSE` and `/doc/LICENSE`
-3. **Edit the README.md and CONTRIBUTION.md files**
-   Edit the `README.md` file to reflect your new project name, description and license. Replace all occurrences of `kuetemeier`, `Kuetemeier.NET`, and `project-template` in both files with your own project name and contact informations.
+#### Commands
+
+````
+/house
+/house commands
+/house summary
+/house info
+/house define
+/house resize <up|down|left|right> <amount>
+/house share <user>
+/house unshare <user>
+/house shareGroup <group>
+/house unshareGroup <group>
+/house delete
+/house scan
+/house reloadconfig
+````
+To get more information about a command type /<command> help ingame.
+
+#### Permissions
+
+````
+houseregions.define Can define new or resize existing houses.
+houseregions.delete Can delete existing houses.
+houseregions.share Can share houses.
+houseregions.sharewithgroups Can share houses with TShock groups.
+houseregions.nolimits Can define houses without a maximum limit or size restrictions.
+houseregions.housingmaster Can display a list of all house owners. Can change settings of any house, either owned or not owned.
+houseregions.cfg Can reload the configuration file.
+````
+
 
 ## Versioning
 
@@ -80,6 +100,11 @@ Editor preferences are available in the editor config for easy use in common tex
 * <https://twitter.com/kuetemeier>
 * <https://github.com/kuetemeier>
 
+### Inspired by
+
+This project would not be possible with the great work form the TShock Server team, docker and the inspirations from 
+[amonetta](https://github.com/amonetta/tshock/) and [kalhartt](https://github.com/kalhartt/docker-tshock). Thank you, very much!
+
 ## Copyright and Licenses
 
 ### Apache License 2.0
@@ -104,11 +129,11 @@ Documentations in the `doc` folder released under Creative Commons - [CC-BY 4.0]
 
 ### External libraries and software
 
-All files located in the `node_modules` and `external` directories (if present)
+All files located in the `lib` and `external` directories (if present)
 are externally maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
 
-[Kuetemeier.NET]: https://kuetemeier.net/	"Kuetemeier.NET GmbH"
+[Jörg Kütemeier]: https://kuetemeier.de/	"Jörg Kütemeier"
 [CC-BY 4.0]: http://creativecommons.org/licenses/by/4.0/	"Creative Commons Attribution 4.0 International (CC BY 4.0)"
 [Apache 2.0]: http://www.apache.org/licenses/LICENSE-2.0
