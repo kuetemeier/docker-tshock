@@ -9,3 +9,4 @@ services:
       - 127.0.0.1:7878:7878/tcp
     volumes:
       - $HOME/.local/share/Terraria:/opt/tshock/Terraria
+      - $HOME/.local/share/tshock:/opt/tshock/tshock
