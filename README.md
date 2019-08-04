@@ -32,6 +32,12 @@ so I use this template as a common starting point for my projects.
 
 ## Quick start
 
+Clone this repo or get the `docker-compose` file from this repo:
+
+````
+
+````
+
 
 ## Plugins
 
@@ -41,14 +47,30 @@ so I use this template as a common starting point for my projects.
 
 ### GHOST PLUGIN (VANISH) 1.1
 
+#### Description
+
+"A plugin that allows admins to become invisible and undetectable on command. While in ghost mode, admins don't appear on the player list, in the player count, they can chat, use commands, see others, and whisper other players."
+
+#### Commands
+
+````
+/ghost
+````
+
+#### Links
+
 - https://tshock.co/xf/index.php?resources/ghost-plugin-vanish.217/
 - https://github.com/DannyDan77/Ghost
 
-
-
 ### House Regions Plugin
 
-- https://tshock.co/xf/index.php?resources/house-regions.191/
+#### Description
+
+This plugin provides players on TShock driven Terraria servers the possibility of defining houses in which other players can not alter any tiles. It accomplishes this by utilizing TShock's region system, i.e. this plugin simply wraps the region system functionality with an easy to use and more restricted interface designed for regular users.
+
+For quick usage and for the sake of usabilitiy house regions are kept entirely unnamed, when being defined two points to mark the region boundaries are sufficient. To change parameters of a house region later, like adding shared players or groups, the player must simply stand in the region they want to change and execute the related house commands. The maximum amount of house regions per user, several size restrictions, and whether house regions can overlap with regular TShock regions can be configured.
+
+Warning: TShock regions defined through this plugin are named in the format "*H_User:HouseIndex" thus, if you manually define a TShock region with this name format, this plugin will treat the region just like a house.
 
 #### Commands
 
@@ -80,6 +102,11 @@ houseregions.nolimits Can define houses without a maximum limit or size restrict
 houseregions.housingmaster Can display a list of all house owners. Can change settings of any house, either owned or not owned.
 houseregions.cfg Can reload the configuration file.
 ````
+
+#### Links
+
+
+- https://tshock.co/xf/index.php?resources/house-regions.191/
 
 
 ## Versioning
