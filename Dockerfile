@@ -27,6 +27,7 @@ ENV TSHOCK_VERSION="${TSHOCK_VERSION}"
 ENV HOUSE_REGION_VERSION="1.2.2"
 ENV CLANS_VERSION="v1.0"
 ENV PERMABUFFS_VERSION="4.1.0"
+ENV PROTECTOR_VERSION="1.7.0"
 ENV TSHOCK_HOME="/opt/tshock"
 
 # Install unzip package,
@@ -68,6 +69,11 @@ RUN PERMABUFFS_URL=$(curl -sS -X GET https://api.github.com/repos/amonetta/Perma
     curl -sL "${PERMABUFFS_URL}" -o "/tmp/Permabuffs_${PERMABUFFS_VERSION}.zip" && \
     unzip  "/tmp/Permabuffs_${PERMABUFFS_VERSION}.zip" -d /opt/tshock && \
     rm "/tmp/Permabuffs_${PERMABUFFS_VERSION}.zip"
+
+RUN PROTECTOR_URL=$(curl -sS -X GET https://api.github.com/repos/CoderCow/Protector-Plugin/releases/tags/${PROTECTOR_VERSION} | jq -r '.assets[0].browser_download_url') && \
+    curl -sL "${PROTECTOR_URL}" -o "/tmp/Protector_${PROTECTOR_VERSION}.zip" && \
+    unzip -o "/tmp/Protector_${PROTECTOR_VERSION}.zip" -d /opt/tshock && \
+    rm "/tmp/Protector_${PROTECTOR_VERSION}.zip"
 
 COPY vendor/GhostPlugin.dll /opt/tshock/ServerPlugins/GhostPlugin.dll
 
