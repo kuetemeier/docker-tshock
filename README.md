@@ -35,9 +35,15 @@ so I use this template as a common starting point for my projects.
 Clone this repo or get the `docker-compose` file from this repo:
 
 ````
+mkdir tshock
+cd tshock
 
+curl -O https://raw.githubusercontent.com/kuetemeier/docker-tshock/master/docker-compose.yml
+
+docker-compose up
 ````
 
+Data will be saved to the volume defined in `docker-compose.yml` (default: `$HOME/.local/share/Terraria`).
 
 ## Plugins
 
