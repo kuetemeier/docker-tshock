@@ -1,6 +1,6 @@
-# Terraria - TShock Server in Docker
+# Terraria on your own tShock Server in Docker (with some usefull PlugIns)
 
-Let's play Terraria with docker ;-)
+Let's play [Terraria](http://terraria.org/) with [docker](https://www.docker.com/) on your own [tShock](https://tshock.co) Server with some usefull PlugIns. ;-)
 
 **Feel free to use it directly or fork it for you own server configuration**
 
