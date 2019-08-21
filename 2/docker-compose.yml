@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  tshock:
+    image: kuetemeier/tshock
+    container_name: tshock2
+    restart: always
+    ports:
+      - 6666:7777/tcp
+      - 127.0.0.1:6868:7878/tcp
+    volumes:
+      - $HOME/.local/share/Terraria2:/opt/tshock/Terraria
+      - $HOME/.local/share/tshock2:/opt/tshock/tshock
